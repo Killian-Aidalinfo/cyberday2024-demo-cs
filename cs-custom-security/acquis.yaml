@@ -1,0 +1,10 @@
+#Generated acquisition file - wizard.sh (service: ssh) / files :
+journalctl_filter:
+ - _SYSTEMD_UNIT=ssh.service
+labels:
+  type: syslog
+---
+filenames:
+  - /var/log/couchdb/couch.log
+labels:
+  type: couchdb

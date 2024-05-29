@@ -1,0 +1,17 @@
+services:
+  couchdb:
+    image: couchdb
+    container_name: cyberday-couchdb
+    ports:
+      - "5984:5984"
+    volumes:
+      - /etc/couchdb/config:/opt/couchdb/etc/local.d
+      - data:/opt/couchdb/data
+      - /var/log/couchdb:/opt/couchdb/log
+    environment:
+      - COUCHDB_USER=udhyiautHJDAVGDHJ
+      - COUCHDB_PASSWORD=IDAUYTZVDGBHnjahvgdgHJDAVUGDH
+    restart: unless-stopped
+
+volumes:
+  data:
